@@ -8,8 +8,8 @@ const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 
 const allowedOrigins = [
-  'https://lernyfy-shivam12shahs-projects.vercel.app',
-  'https://lernyfy-a2uzlw9yw-shivam12shahs-projects.vercel.app'
+  'https://lernyfy-git-main-shivam12shahs-projects.vercel.app/login',
+  
 ];
 
 app.use(cors({
