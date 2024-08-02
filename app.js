@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid");
 app.use(cors({ origin: true, credentials: true }));
 // //dotnev
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://lernyfy-git-main-shivam12shahs-projects.vercel.app');
+  res.header('Access-Control-Allow-Origin', 'https://learnify-frontend-i0agusj0a-yogendra09s-projects.vercel.app/');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
