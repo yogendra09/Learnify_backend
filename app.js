@@ -7,12 +7,21 @@ const { v4: uuidv4 } = require("uuid");
 // //dotnev
 require("dotenv").config();
 
-app.use(
-  cors({
-    origin: 'https://lernyfy-shivam12shahs-projects.vercel.app/',
-    credentials: true,
-  })
-);
+const allowedOrigins = [
+  'https://lernyfy-shivam12shahs-projects.vercel.app',
+  'https://lernyfy-a2uzlw9yw-shivam12shahs-projects.vercel.app'
+];
+
+app.use(cors({
+  origin: function(origin, callback) {
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 
 //logger
 const logger = require("morgan");
