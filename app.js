@@ -45,12 +45,12 @@ app.use(fileUpload());
 const { genratedErrors } = require("./middlewares/error");
 const { isAuthenticated } = require("./middlewares/auth");
 
-app.use("/", require("./routes/indexroute"));
-app.use("/", require("./routes/courseroute"));
+app.use("/", require("./routes/indexRoute"));
+app.use("/", require("./routes/indexRoute"));
 
 var instance = new Razorpay({
-  key_id: "rzp_test_GG5OUnq85pmaQI",
-  key_secret: "D9aSr9sGEuU6Bvgc3Lz0r6eO",
+  key_id: process.env.KEY_ID,
+  key_secret: process.env.KEY_SECRET,
 });
 
 app.post("/create/orderId", isAuthenticated, function (req, res, next) {
