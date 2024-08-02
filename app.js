@@ -15,7 +15,6 @@ app.use((req, res, next) => {
 });
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://lernyfy-f7w57rpfu-shivam12shahs-projects.vercel.app/',
   'https://lernyfy-git-main-shivam12shahs-projects.vercel.app/' // Add your frontend domain here
 ];
 
