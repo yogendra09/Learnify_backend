@@ -46,7 +46,7 @@ const { genratedErrors } = require("./middlewares/error");
 const { isAuthenticated } = require("./middlewares/auth");
 
 app.use("/", require("./routes/indexRoute"));
-app.use("/", require("./routes/indexRoute"));
+app.use("/", require("./routes/courseroute"));
 
 var instance = new Razorpay({
   key_id: process.env.KEY_ID,
@@ -92,6 +92,6 @@ app.all("*", (req, res, next) => {
 });
 app.use(genratedErrors);
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT ||3000, () => {
   console.log("server is running port ", process.env.PORT);
 });
