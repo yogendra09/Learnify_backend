@@ -9,7 +9,7 @@ require("dotenv").config();
 
 app.use(
   cors({
-    origin: true,
+    origin: 'https://lernyfy-shivam12shahs-projects.vercel.app/',
     credentials: true,
   })
 );
