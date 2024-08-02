@@ -12,24 +12,6 @@ app.use((req, res, next) => {
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   next();
 });
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://lernyfy-git-main-shivam12shahs-projects.vercel.app/' // Add your frontend domain here
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin) || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true
-}));
-
-
-
 
 //logger
 const logger = require("morgan");
