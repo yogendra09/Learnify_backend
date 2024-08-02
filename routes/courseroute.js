@@ -16,7 +16,7 @@ const { isAuthenticated, iaAdmin } = require("../middlewares/auth");
 
 
 
-router.get("/course", isAuthenticated, coursepage);
+router.get("/course", coursepage);
 
 router.get("/course/allcourses", isAuthenticated, allcourses);
 
