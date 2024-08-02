@@ -1,12 +1,11 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const app = express();
 const Razorpay = require("razorpay");
 const { v4: uuidv4 } = require("uuid");
-
+app.use(cors({ origin: true, credentials: true }));
 // //dotnev
-require("dotenv").config();
-
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', 'https://lernyfy-git-main-shivam12shahs-projects.vercel.app');
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
