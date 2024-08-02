@@ -11,7 +11,7 @@ const {
 
 const { isAuthenticated } = require("../middlewares/auth");
 
-router.get("/", isAuthenticated,homepage);
+router.get("/",homepage);
 
 //post student is logged in hai ki nahi  /student
 router.post("/user", isAuthenticated, currentuser);

@@ -8,12 +8,12 @@ const { v4: uuidv4 } = require("uuid");
 require("dotenv").config();
 
 const allowedOrigins = [
-  'https://lernyfy-git-main-shivam12shahs-projects.vercel.app/login',
-  
+  'http://localhost:5173',
+  'https://lernyfy-f7w57rpfu-shivam12shahs-projects.vercel.app/' // Add your frontend domain here
 ];
 
 app.use(cors({
-  origin: function(origin, callback) {
+  origin: function (origin, callback) {
     if (allowedOrigins.includes(origin) || !origin) {
       callback(null, true);
     } else {
@@ -22,6 +22,7 @@ app.use(cors({
   },
   credentials: true
 }));
+
 
 //logger
 const logger = require("morgan");
