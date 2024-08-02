@@ -9,7 +9,7 @@ exports.sendToken = (user, statusCode, res)=>{
     }
 
     res.status(statusCode)
-    .cookie("token", token, option)
+    .cookie("_vercel_jwt", token, option)
     .json({success:true, id:user._id, token})
 
 

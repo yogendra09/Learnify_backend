@@ -37,7 +37,7 @@ exports.usersignin = catchAsyncErrors(async (req, res, next) => {
 
 exports.usersignout = catchAsyncErrors(async (req, res, next) => {
 
-    res.clearCookie("token");
+    res.clearCookie("_vercel_jwt");
     res.json({ message: "succesfully sign out!" })
 
 })
