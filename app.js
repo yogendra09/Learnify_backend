@@ -7,6 +7,12 @@ const { v4: uuidv4 } = require("uuid");
 // //dotnev
 require("dotenv").config();
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://lernyfy-git-main-shivam12shahs-projects.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
 const allowedOrigins = [
   'http://localhost:5173',
   'https://lernyfy-f7w57rpfu-shivam12shahs-projects.vercel.app/',
@@ -23,6 +29,8 @@ app.use(cors({
   },
   credentials: true
 }));
+
+
 
 
 //logger
