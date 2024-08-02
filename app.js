@@ -28,7 +28,7 @@ const cookiesParser = require("cookie-parser");
 app.use(
   session({
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: true,
     cookie: { secure: false },
     secret: process.env.SESSION_SECRET,
   })
